@@ -1,0 +1,74 @@
+<!-- Page Content -->
+<div class="col-sm-6 talent-dev-content goal-setting">
+  <div><strong>Phase 1</strong></div>
+  <h2>Goal Setting</h2>
+  <p class="description">Develop level-appropriate goals for the year. Understand how sucess will be measured.</p>
+
+  <div class="dropdown">
+    <a aria-expanded="false" ng-click="rr=!rr" class="dropdown-toggle">
+      <h3 class="group-title">Roles and Responsibilities</h3>
+      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" title="Show Data"></span>
+    </a>
+    <div class="dropdown-wrapper" ng-if="rr">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-click="swap=!swap"/> Check me out
+        </label>
+      </div>
+
+      <div ng-if="!swap">
+        <h5>Manager:</h5>
+        <ul>
+          <li>Share department goals with staff and discuss alignment with corporate goals</li>
+          <li>Reviews expectations with employees</li>
+          <li>Ensures employee goals are relivant and level-appropriate</li>
+          <li>Knows how employee sucess will be measured</li>
+          <li>Approve employee's goals</li>
+        </ul>
+      </div>
+
+      <div ng-if="swap">
+        <h5>Employee:</h5>
+        <ul>
+          <li>Draft goals with department in mind</li>
+          <li>Refers to level charts to develop appropriate goals</li>
+          <li>Collaborates with teammates working on similar work</li>
+          <li>Shares goal with manager</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="dropdown">
+    <a aria-expanded="false" ng-click="tt=!tt" class="dropdown-toggle">
+      <h3 class="group-title">Tools &amp; Templates</h3>
+      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" title="Show Data"></span>
+    </a>
+    <div class="dropdown-wrapper" ng-if="tt">
+      <ul>
+        <li><a href="https://eims.sandia.gov/Workplace/getContent">Learn How to Develop SMART Performance Objectives</a></li>
+        <li><a href="https://eims.sandia.gov/Workplace/getContent?vsId={926D389A-6B76-49A0-921F-FE797C100843}&objectStoreName=EIMS.__.Content&objectType=document">Learn About Model Behaviors & How They Relate to Our Core Values</a></li>
+        <li><a href="https://eims.sandia.gov/Workplace/getContent?objectStoreName=EIMS.__.Content&vsId={56AD640F-D5A2-4CCD-AF81-6507770F0B9F}&objectType=document&folderId={AE42E094-2DAC-45F0-B67C-B77FD3B7E3CF}">Objective Alignment Worksheet</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a aria-expanded="false" ng-click="t=!t" class="dropdown-toggle">
+      <h3 class="group-title">Training</h3>
+      <span class="glyphicon glyphicon-chevron-up" aria-hidden="true" title="Show Data" ng-show="t"></span>
+      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" title="Hide Data" ng-show="!t"></span>
+    </a>
+    <div class="dropdown-wrapper" ng-if="t">
+      <h5>Employee and manager (and HR)</h5>
+      <ul>
+        <li>How to determine relevant goals</li>
+        <li>How to write goals</li>
+        <li>How to measure success</li>
+        <li>Knows</li>
+      </ul>
+      <div>JIT help videos</div>
+      <div>Labs/Lunch and Learns</div>
+    </div>
+  </div>
+
+</div>

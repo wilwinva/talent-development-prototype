@@ -1,0 +1,122 @@
+<!-- Page Content -->
+<div class="col-sm-6 talent-dev-content goal-setting" ng-init="pageInfo = goalsetting.data">
+  <div ng-if="pageInfo.phase.length > 0"><strong ng-bind="pageInfo.phase"></strong></div>
+  <h2 ng-bind="pageInfo.title"></h2>
+  
+  <div class="dropdown" ng-init="des=true">
+      <a aria-expanded="false" ng-click="des=!des" class="dropdown-toggle">
+        <h3 class="group-title">What It Is</h3>
+        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true" title="Show Data" ng-show="des"></span>
+        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" title="Hide Data" ng-show="!des"></span>
+      </a>
+      
+      <div class="dropdown-wrapper" ng-if="des">
+           <ul>
+     		 <li ng-repeat="line in pageInfo.description">
+        		{{line.text}}
+           <ul ng-if="line.children.length > 0">
+             <li ng-repeat="child in line.children">
+               {{child.text}}
+             </li>
+           </ul>
+      		</li>
+    		</ul>
+  	</div>
+        </div>
+        
+
+    <div class="dropdown">
+      <a aria-expanded="false" ng-click="rr=!rr" class="dropdown-toggle">
+        <h3 class="group-title">Roles & Responsibilities</h3>
+        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true" title="Show Data" ng-show="rr"></span>
+        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" title="Hide Data" ng-show="!rr"></span>
+      </a>
+      <div class="dropdown-wrapper" ng-if="rr">
+      
+      <div class="row roles-manager-employee">
+        
+        <div class="col-sm-6">
+          <h5>Manager:</h5>
+            <ul>
+              <li ng-repeat="line in pageInfo.rr.manager">
+                {{line.text}}
+              </li>
+            </ul>
+          </div>
+
+        <div class="col-sm-6">
+          <h5>Employee:</h5>
+            <ul>
+              <li ng-repeat="employee in pageInfo.rr.employee" ng-switch="employee.children.length">
+                <div ng-switch-when="0" ng-bind-html="employee.text"></div>
+                <div ng-switch-when="!0">
+                  {{employee.text}}
+                  <ul>
+                    <li ng-repeat="child in employee.children" ng-switch="child.link.length">
+                      <div ng-switch-when="0" ng-bind-html="child.text"></div>
+                      <div ng-switch-when="!0">
+                        <a ng-href="child.link" ng-bind-html="child.text" target='_blank'></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        
+        </div> 
+      
+     <!--   
+     <div class="checkbox">
+    		<label>
+          <input type="checkbox" ng-click="swap=!swap"/> Show employees' roles & responsibilities
+    		</label>
+  		</div>
+
+        <div ng-if="!swap">
+          <h5>Manager:</h5>
+            <ul>
+              <li ng-repeat="line in pageInfo.rr.manager">
+                {{line.text}}
+              </li>
+            </ul>
+          </div>
+
+        <div ng-if="swap">
+          <h5>Employee:</h5>
+            <ul>
+              <li ng-repeat="employee in pageInfo.rr.employee" ng-switch="employee.children.length">
+                <div ng-switch-when="0" ng-bind-html="employee.text"></div>
+                <div ng-switch-when="!0">
+                  {{employee.text}}
+                  <ul>
+                    <li ng-repeat="child in employee.children" ng-switch="child.link.length">
+                      <div ng-switch-when="0" ng-bind-html="child.text"></div>
+                      <div ng-switch-when="!0">
+                        <a ng-href="child.link" ng-bind-html="child.text" target='_blank'></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          -->
+         
+      </div>
+    </div>
+    <div class="dropdown">
+      <a aria-expanded="false" ng-click="tt=!tt" class="dropdown-toggle">
+        <h3 class="group-title">Tools &amp; Templates</h3>
+        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true" title="Show Data" ng-show="tt"></span>
+        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" title="Hide Data" ng-show="!tt"></span>
+      </a>
+      <div class="dropdown-wrapper" ng-if="tt">
+        <ul>
+          <li ng-repeat="line in pageInfo.tt">
+            <a ng-href="{{line.link}}" ng-bind="line.text" target='_blank'></a> <span ng-if="line.file" ng-bind="line.file"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,132 @@
+<div class="container-fluid activity-timeline-content">
+  <div class="row">
+    <div class="col-sm-12">
+    
+      <div class="row">
+      <span class="col-sm-5">
+        <h2 class="page-title">Activity Timeline</h2>
+        </span>
+        <div class="viewer-controls pull-right col-sm-7">
+        
+        <div class="timeline-options checkbox  col-sm-4">
+      <label>
+        <input type="checkbox" ng-click="showOption3=!showOption3"/> Show option 3
+        </label>
+      </div>
+        <span class="timeline-type-group col-sm-4">
+          <a ng-click="byYear=!byYear">
+            <span class="glyphicon glyphicon-th-list" ng-class="{'glyphicon-calendar': byYear}"></span> View as <span ng-bind="byYear?'timeline':'list'">list</span>
+          </a>
+        </span>
+          <span class="col-sm-4"><a href="#/"><span class="glyphicon glyphicon-adjust"></span> Back to chart</a></span>
+        </div>
+      </div>
+      
+<!--      <div class="timeline-options checkbox">
+      <label>
+        <input type="checkbox" ng-click="showOption3=!showOption3"/> Show option 3
+        </label>
+      </div>-->
+      <div ng-class="{'by-year':byYear}" class="timeline by-month">
+        <div class="timeline-calendar clearfix" ng-hide="byYear">
+          <div class="col-sm-1 jan active" onclick="setTimelineMonth(this,'jan');">
+            JAN
+          </div>
+          <div class="col-sm-1 feb" onclick="setTimelineMonth(this,'feb');">
+            FEB
+          </div>
+          <div class="col-sm-1 mar" onclick="setTimelineMonth(this,'mar');">
+            MAR
+          </div>
+          <div class="col-sm-1 apr" onclick="setTimelineMonth(this,'apr');">
+            APR
+          </div>
+          <div class="col-sm-1 may" onclick="setTimelineMonth(this,'may');">
+            MAY
+          </div>
+          <div class="col-sm-1 jun" onclick="setTimelineMonth(this,'jun');">
+            JUN
+          </div>
+          <div class="col-sm-1 jul" onclick="setTimelineMonth(this,'jul');">
+            JUL
+          </div>
+          <div class="col-sm-1 aug" onclick="setTimelineMonth(this,'aug');">
+            AUG
+          </div>
+          <div class="col-sm-1 sep" onclick="setTimelineMonth(this,'sep');">
+            SEP
+          </div>
+          <div class="col-sm-1 oct" onclick="setTimelineMonth(this,'oct');">
+            OCT
+          </div>
+          <div class="col-sm-1 nov" onclick="setTimelineMonth(this,'nov');">
+            NOV
+          </div>
+          <div class="col-sm-1 dec" onclick="setTimelineMonth(this,'dec');">
+            DEC
+          </div>
+        </div>
+        <div class="clearfix timeline-controls checkbox col-sm-5 col-sm-offset-7">
+          <label>View: </label>&nbsp;&nbsp;
+          <label>
+          <input type="checkbox" checked="checked" ng-click="showManager=!showManager"/> Manager 
+          </label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <label>
+          <input type="checkbox" checked="checked" ng-click="showEmployee=!showEmployee"/> Employee 
+          </label>
+        </div>
+        <div class="timeline-content row container-fluid option2" ng-init="option2 = timeline.data.option2" ng-hide="showOption3">
+          <h3 class="timeline-year" ng-bind="option2.year"></h3>
+          <ul class="parent-list">
+            <li class="row table-head" ng-show="byYear">
+              <div class="month">Month</div>
+              <div class="manager" ng-hide="showManager">Manager</div>
+              <div class="employee" ng-hide="showEmployee">Employee</div>
+            </li>
+            <li class="row {{month.name|monthFirst}}" ng-repeat="month in option2.months" ng-class="{hide:!$first,show:byYear}">
+            <div class="month">
+              <h3>{{month.name|monthFirst|toCap}}<span>{{month.name|monthLast}} {{option2.year}}</span></span></h3></div>
+              <div class="manager" ng-hide="showManager">
+                <h5>Manager</h5>
+                <ul>
+                  <li ng-repeat="line in month.manager" ng-bind-html="line.data"></li>
+                </ul>
+              </div>
+              <div class="employee" ng-hide="showEmployee">
+               <h5>Employee</h5>
+                <ul>
+                  <li ng-repeat="line in month.employee" ng-bind-html="line.data"></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="timeline-content row container-fluid option3" ng-init="option3 = timeline.data.option3" ng-show="showOption3">
+          <h3 class="timeline-year" ng-bind="option3.year"></h3>
+          <ul class="parent-list">
+            <li class="row table-head">
+              <div class="month">Month</div>
+              <div class="manager" ng-hide="showManager">Manager</div>
+              <div class="employee" ng-hide="showemployee">Employee</div>
+            </li>
+            <li class="row {{month.name|monthFirst}}" ng-repeat="month in option3.months" ng-class="{hide:!$first,show:byYear}">
+              <div class="month"><h3>{{month.name|monthFirst|toCap}}<span>{{month.name|monthLast}} {{option3.year}}</span></span></h3></div>
+              <div class="manager" ng-hide="showManager">
+                <h5>Manager</h5>
+                <ul>
+                  <li ng-repeat="line in month.manager" ng-bind-html="line.data"></li>
+                </ul>
+              </div>
+              <div class="employee" ng-hide="showEmployee">
+                <h5>Employee</h5>
+                <ul>
+                  <li ng-repeat="line in month.employee" ng-bind-html="line.data"></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
