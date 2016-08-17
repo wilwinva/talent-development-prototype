@@ -1,5 +1,6 @@
 /*-- bootstrap or pl overrides --*/
 
+
 a:focus {outline:none;}
 a::-moz-focus-inner {border:0;}
 
@@ -66,7 +67,7 @@ header #primaryMenu .nav li.active::after, .header #primaryMenu .navbar-nav > li
  }
 
 
-.theme-clear .header #primaryMenu .nav li.active, 
+.theme-clear .header #primaryMenu .nav li.active,
 .theme-clear .header #primaryMenu .navbar-nav > li:hover {
     border-bottom: 0.1875em solid #0076a9;
 }
@@ -142,8 +143,8 @@ h3.group-title {
 }
 
 .timeline-link.btn {
-	border: 1px solid #069; 
-	background: transparent;  
+	border: 1px solid #069;
+	background: transparent;
 	color:#069;
 }
 
@@ -292,7 +293,7 @@ background:#9dc4d8;
   display: none;
 }
 
-.timeline.by-month .timeline-content .row .manager, 
+.timeline.by-month .timeline-content .row .manager,
 .timeline.by-month .timeline-content .row .employee {
   display: table-cell;
  /* width: 45%*/
@@ -356,13 +357,14 @@ background:#9dc4d8;
 .timeline.by-year .timeline-content .row .month {
   display: inline-table;
   width: 10%;
+		padding-top:4px;
 }
 
 .timeline.by-year .timeline-content .row .month span {
   display: none;
 }
 
-.timeline.by-year .timeline-content .row .manager, 
+.timeline.by-year .timeline-content .row .manager,
 .timeline.by-year .timeline-content .row .employee {
   	display: inline-table;
     padding: 0.5em;
@@ -400,39 +402,16 @@ background:#9dc4d8;
   /*opacity: .9;*/
 }
 
-/*.ie #svg {
-	height:470px;
-}*/
 
-
-/*-- svg animation test Bb --*/
-
-/*--
-#svg .slice#s-goal-setting {
-	transform-origin: 0px 0px;
-}
-
-#svg .slice#s-goal-setting {
-transform: scale(1, 1);
-}
-
-#svg .slice#s-goal-setting:hover {
-	transform: scale(1.3, 1.3) translate(-46px, -28px);
-}
-
-#svg .slice#s-goal-setting:hover {
-	transition: transform 0.25s ease-in-out;
-}
---*/
 
 /******************************************/
 #svg .highlight#s-goal-setting {
+
    animation: goalsetting-in .25s ease-in-out 1 normal forwards;
-   /*fill:#ff7700;*/
 }
 #svg .unhightlight#s-goal-setting {
     animation: goalsetting-out .25s ease-in-out 1 normal forwards;
-    
+
 }
 #svg #s-goal-setting path {
 	fill:#d8e7ef;
@@ -442,18 +421,19 @@ transform: scale(1, 1);
 }
 @keyframes goalsetting-in {
     0% {
-        transform: scale(1.0); 
-    }
+        transform: scale(1.0);
+            }
     100% {
-       transform: scale(1.3, 1.3) translate(-45px, -28px);  
+      transform: scale(1.3, 1.3) translate(-45px, -28px);
+
     }
 }
 @keyframes goalsetting-out {
-    0% {     
+    0% {
         transform: scale(1.3, 1.3) translate(-45px, -28px);
     }
     100% {
-        transform: scale(1.0);
+         transform: scale(1.0);
     }
 }
 @keyframes goalsetting-in-color {
@@ -496,7 +476,7 @@ transform: scale(1, 1);
     }
 }
 @keyframes midyear-out {
-    0% {     
+    0% {
         transform: scale(1.3, 1.3) translate(-62px, -45px);
     }
     100% {
@@ -513,6 +493,10 @@ transform: scale(1, 1);
     }
 }
 
+
+
+
+
 #svg #s-mid-year-review:hover path {
   fill:#ff7700;
 }
@@ -524,9 +508,11 @@ transform: scale(1, 1);
 
 #svg .highlight#s-career-development{
    animation: careerdevelopment-in .25s ease-in-out 1 normal forwards;
+
 }
+
 #svg .unhightlight#s-career-development {
-    animation: careerdevelopment-out .25s ease-in-out 1 normal forwards;
+    /*animation: careerdevelopment-out .25s ease-in-out 1 normal forwards;*/
 }
 #svg #s-career-development path {
 	fill:#b1d0e0;
@@ -543,7 +529,7 @@ transform: scale(1, 1);
     }
 }
 @keyframes careerdevelopment-out {
-    0% {     
+    0% {
         transform: scale(1.3, 1.3) translate(-45px, -62px);
     }
     100% {
@@ -572,6 +558,7 @@ transform: scale(1, 1);
 
 #svg .highlight#s-year-end-review{
    animation: yearend-in .25s ease-in-out 1 normal forwards;
+   fill: #ff7700;
 }
 #svg .unhightlight#s-year-end-review {
     animation: yearend-out .25s ease-in-out 1 normal forwards;
@@ -591,7 +578,7 @@ transform: scale(1, 1);
     }
 }
 @keyframes yearend-out {
-    0% {     
+    0% {
         transform: scale(1.3, 1.3) translate(-28px, -45px);
     }
     100% {
@@ -613,6 +600,7 @@ transform: scale(1, 1);
 #svg #s-year-end-review:hover {
   fill:#ffffff;
 }
+
 
 
 /*******************************************/
@@ -641,15 +629,32 @@ transform: scale(1, 1);
 #svg #s-ongoing-dialog:hover {
   fill:#ffffff;
 }
+
+#svg #s-ongoing-dialog.centerRoll path {
+  fill:#ff7700;
+}
+
 /*****************************************/
 
 /* bubbles og b1d0e0 */
 /* bubbles h ffb371*/
 
 
-  .ring-peices text{
+.ring-peices text {
   fill: #069;
 }
+.ring-peices .centerRoll {
+  fill:#ffb371;
+}
+.centerRoll:hover {
+  cursor:pointer;
+}
+.highlight:hover {
+  cursor:default;
+}
+/*.ring-peices text.centerRoll {
+ fill: #df6800;
+}*/
 .ring-peices text.highlight {
     animation: ongoing-in-color .25s ease-in-out 1 normal forwards;
 }
@@ -668,7 +673,8 @@ transform: scale(1, 1);
 }
 
 .ring-peices path.highlight, .ring-peices circle.highlight {
-    animation: ongoing-in-shape-color .25s ease-in-out 1 normal forwards;
+    /*animation: ongoing-in-shape-color .25s ease-in-out 1 normal forwards;*/
+    fill: #ffb371;
 }
 
 @keyframes ongoing-in-shape-color {
@@ -696,12 +702,15 @@ transform: scale(1, 1);
 @keyframes pulse-goal-setting {
     0% {
        fill:#d8e7ef;
+
     }
     50% {
        fill: #ff7700;
+
     }
-       100% {
+      100% {
        fill:#d8e7ef;
+
     }
 }
 
@@ -754,15 +763,15 @@ transform: scale(1, 1);
 @keyframes pulse-year-end {
     0% {
        fill:#9dc4d8;
-      
+
     }
     50% {
        fill: #ff7700;
-       
+
     }
      100% {
        fill:#9dc4d8;
-      
+
     }
 }
 
@@ -775,20 +784,21 @@ transform: scale(1, 1);
 @keyframes pulse-ongoing {
     0% {
       fill:#069;
-      
-      
+
+
     }
     50% {
        fill: #ff7700;
-       
-       
+
+
     }
      100% {
       fill:#069;
-      
-      
+
+
     }
 }
+
 
 
 
@@ -803,11 +813,11 @@ transform: scale(1, 1);
 }
 
 @media (max-width: 767px) {
-	
+
 	#content {
 		padding:0;
 	}
-	
+
 .header .headingGroup {
     display: block;
 	padding:1em;
@@ -819,14 +829,16 @@ transform: scale(1, 1);
 	font-size:1.125em;
 	font-weight:600;
 }
-	
+
 	.header #primaryMenu .navbar-nav {
     margin-left: 0;
 }
 
+
 #svg {
-transform: scale(.85);
+transform: scale(.80);
 margin:0 auto 32px;
+padding:0;
 }
 
 
@@ -859,15 +871,23 @@ margin:0 auto 32px;
 	.header .container {
 	width:auto;
 }
-	
+
 	.header .headingGroup {
     	margin: 0;
     	padding: 2em 3em;
 	}
+
+
+	#svg {
+		transform: scale(.90);
+		margin:0 auto 32px;
+		padding:0;
+		}
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-	
+
 	.header .container {
 	/*width:1024px;*/
 }
@@ -877,7 +897,7 @@ margin:0 auto 32px;
 	padding-left:.8em;
 	font-size:15px;
 	}
-	
+
 	.header #primaryMenu .navbar-nav {
 	margin-left:2.1334em;
 }

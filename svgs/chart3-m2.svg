@@ -1,13 +1,69 @@
 <g id="talent">
+    <defs>
+        <!--     <filter id="f3" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="0" dy="3" />
+      
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="0" />            
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter> -->
+        <filter id="f-goal-setting">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="0" />
+            <feOffset dx="0" dy="4" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.1" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="f-mid-year">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="0" />
+            <feOffset dx="-4" dy="0" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.1" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="f-career-dev">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="0" />
+            <feOffset dx="0" dy="-4" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.1" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="f-end-year">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="0" />
+            <feOffset dx="4" dy="0" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.1" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
     <title>Talent Development</title>
     <g>
-    <g class="ring slice" id="s-ongoing-dialog">
-        <path d="M391.5052,187.7131C386.1837,80.3849,294.863-2.3078,187.5348,3.0137A193.8446,193.8446,0,0,0,60.0637,59.2985l10.088,9.1349a181.1476,181.1476,0,1,1-18.1689,20.884l8.363,6.7664L60.2,68.0712l-27.426,5.7049,8.6357,6.987A193.7561,193.7561,0,0,0,2.8353,206.984c5.3216,107.3283,96.6422,190.021,203.97,184.7S396.8267,295.0413,391.5052,187.7131Z" transform="translate(-2.5924 -2.7706)" />
+        <g class="ring slice" id="s-ongoing-dialog">
+            <!-- <path d="M391.5052,187.7131C386.1837,80.3849,294.863-2.3078,187.5348,3.0137A193.8446,193.8446,0,0,0,60.0637,59.2985l10.088,9.1349a181.1476,181.1476,0,1,1-18.1689,20.884l8.363,6.7664L60.2,68.0712l-27.426,5.7049,8.6357,6.987A193.7561,193.7561,0,0,0,2.8353,206.984c5.3216,107.3283,96.6422,190.021,203.97,184.7S396.8267,295.0413,391.5052,187.7131Z" transform="translate(-2.5924 -2.7706)" /> -->
+            <path d="M18.0822,198.1161c-0.0011-.2563-0.01-0.5109-0.01-0.7675A178.922,178.922,0,0,1,190.7585,18.5411l8.02-8.02-7.6547-7.6547C86.3806,5.9746,2.422,91.8526,2.422,197.3485c0,0.1111.004,0.2211,0.0042,0.3322l7.61-7.61Z" transform="translate(-2.422 -2.7705)" />
+            <path d="M196.5,18.4273c0.167,0,.3328-0.0063.5-0.0063A178.922,178.922,0,0,1,375.8074,191.107l8.152,8.152,7.5323-7.5323C388.5158,86.865,302.5816,2.7705,197,2.7705c-0.1111,0-.2211.004-0.3322,0.0042l7.7424,7.7424Z" transform="translate(-2.422 -2.7705)" />
+            <path d="M375.8839,196.8487c0,0.167.025,0.3328,0.025,0.5a178.9137,178.9137,0,0,1-172.402,178.797l-8.29,8.2946,7.3272,7.4c104.8617-2.976,188.8833-88.91,188.8833-194.4917v-0.0712l-7.5388,7.6136Z" transform="translate(-2.422 -2.7705)" />
+            <path d="M197.7675,376.2664c-0.2563.0011-.5109,0.01-0.7675,0.01A178.9217,178.9217,0,0,1,18.203,203.8648l-8.1624-8.1624L2.518,203.4392C5.626,308.1822,91.504,392.3552,197,392.3552h0.0712L189.59,384.659Z" transform="translate(-2.422 -2.7705)" />
+        </g>
     </g>
-  </g>
-    <g id="convo-bubbles-bottom" class="ring-peices">
+    <g id="convo-bubbles-bottom" class="ring-peices slice">
         <path d="M372.1,320.73a11.0012,11.0012,0,0,1,2.2541,6.5485c0,8.4667-9.6817,15.0762-21.5822,15.0762h-0.08c3.9712,3,9.6939,4.6392,15.963,4.2168l1.0682,0.0661-0.0422,6.6985,6.5315-8.1459,0.2462-.08c6.062-2.3935,9.8278-6.8155,9.8278-11.5537C386.2869,327.472,380.283,322.3336,372.1,320.73Z" transform="translate(-2.5924 -2.7706)" />
-        <path d="M369.2357,320.3254c-3.4928-3.68-9.5676-6.1208-16.4636-6.1208-10.8037,0-19.593,5.99-19.593,13.3525,0,4.7382,3.7658,9.1688,9.8278,11.5624l0.2462,0.0973,6.532,8.1806-0.0422-6.6291,0.4782,0.0326,0.59,0.04c0.6589,0.0445,1.3187.0675,1.9611,0.0675,10.8037,0,19.5934-5.9895,19.5934-13.3515A10.4948,10.4948,0,0,0,369.2357,320.3254Z" transform="translate(-2.5924 -2.7706)"  />
+        <path d="M369.2357,320.3254c-3.4928-3.68-9.5676-6.1208-16.4636-6.1208-10.8037,0-19.593,5.99-19.593,13.3525,0,4.7382,3.7658,9.1688,9.8278,11.5624l0.2462,0.0973,6.532,8.1806-0.0422-6.6291,0.4782,0.0326,0.59,0.04c0.6589,0.0445,1.3187.0675,1.9611,0.0675,10.8037,0,19.5934-5.9895,19.5934-13.3515A10.4948,10.4948,0,0,0,369.2357,320.3254Z" transform="translate(-2.5924 -2.7706)" />
         <text transform="translate(318.9193 400.3513) rotate(-33.9998)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 700">J
             <tspan x="5.7383" y="0">a</tspan>
             <tspan x="11.9688" y="0">n-</tspan>
@@ -16,120 +72,113 @@
         </text>
     </g>
     <g id="slices">
-        <g class="slice" id="s-year-end-review">
-            <path d="M150.1418,196.8279A47.4734,47.4734,0,0,1,163.58,163.68l-85.46-85.46a167.8507,167.8507,0,0,0,0,237.3769l85.5388-85.5387A47.4756,47.4756,0,0,1,150.1418,196.8279Z" transform="translate(-2.5924 -2.7706)"  />
-                           <text transform="translate(64.9351 230.2881)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">N
-                    <tspan x="7.8228" y="0">o</tspan>
-                    <tspan x="14.231" y="0">v</tspan>
-                    <tspan x="20.1431" y="0">-</tspan>
-                    <tspan x="24.1582" y="0">De</tspan>
-                    <tspan x="37.7705" y="0">c</tspan>
-                </text>
-                <text transform="translate(41.4275 188.3967)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">
-                    <tspan style="letter-spacing: -1px">Y</tspan>
-                    <tspan x="10.7324" y="0">e</tspan>
-                    <tspan x="22.6099" y="0">a</tspan>
-                    <tspan x="34.9814" y="0">r</tspan>
-                    <tspan x="43.2012" y="0">-</tspan>
-                    <tspan x="51.1401" y="0">E</tspan>
-                    <tspan x="63.5576" y="0">n</tspan>
-                    <tspan x="76.8896" y="0">d</tspan>
-                    <tspan x="8.4634" y="24">R</tspan>
-                    <tspan x="22.4458" y="24">e</tspan>
-                    <tspan x="34.3184" y="24">v</tspan>
-                    <tspan x="46.0757" y="24">i</tspan>
-                    <tspan x="52.1284" y="24">e</tspan>
-                    <tspan x="64.0103" y="24">w</tspan>
-                </text>
-            
+        <g class="slice" id="s-year-end-review" transform="tanslate(0 0) scale(1)">
+            <path d="M150.1418,196.8279A47.4734,47.4734,0,0,1,163.58,163.68l-85.46-85.46a167.8507,167.8507,0,0,0,0,237.3769l85.5388-85.5387A47.4756,47.4756,0,0,1,150.1418,196.8279Z" transform="translate(-2.5924 -2.7706)" />
+            <text transform="translate(64.9351 230.2881)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">N
+                <tspan x="7.8228" y="0">o</tspan>
+                <tspan x="14.231" y="0">v</tspan>
+                <tspan x="20.1431" y="0">-</tspan>
+                <tspan x="24.1582" y="0">De</tspan>
+                <tspan x="37.7705" y="0">c</tspan>
+            </text>
+            <text transform="translate(41.4275 188.3967)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">
+                <tspan style="letter-spacing: -1px">Y</tspan>
+                <tspan x="10.7324" y="0">e</tspan>
+                <tspan x="22.6099" y="0">a</tspan>
+                <tspan x="34.9814" y="0">r</tspan>
+                <tspan x="43.2012" y="0">-</tspan>
+                <tspan x="51.1401" y="0">E</tspan>
+                <tspan x="63.5576" y="0">n</tspan>
+                <tspan x="76.8896" y="0">d</tspan>
+                <tspan x="8.4634" y="24">R</tspan>
+                <tspan x="22.4458" y="24">e</tspan>
+                <tspan x="34.3184" y="24">v</tspan>
+                <tspan x="46.0757" y="24">i</tspan>
+                <tspan x="52.1284" y="24">e</tspan>
+                <tspan x="64.0103" y="24">w</tspan>
+            </text>
         </g>
-        <g class="slice" id="s-career-development">
-            <path d="M197.785,244.4713a47.4894,47.4894,0,0,1-34.1257-14.4126L78.1206,315.5974a167.85,167.85,0,0,0,237.3769,0l-84.5646-84.5646A47.4731,47.4731,0,0,1,197.785,244.4713Z" transform="translate(-2.5924 -2.7706)"  />
-            
-                <text transform="translate(171.897 325.5491)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">S
-                    <tspan x="6.5674" y="0">e</tspan>
-                    <tspan x="12.6655" y="0">p</tspan>
-                    <tspan x="19.4038" y="0">t</tspan>
-                    <tspan x="23.3574" y="0">-</tspan>
-                    <tspan x="27.5181" y="0">O</tspan>
-                    <tspan x="35.6021" y="0">c</tspan>
-                    <tspan x="41.332" y="0">t</tspan>
-                </text>
-                <text transform="translate(160.6821 284.1956)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">C
-                    <tspan x="13.752" y="0">a</tspan>
-                    <tspan x="26.124" y="0">r</tspan>
-                    <tspan x="34.9028" y="0">e</tspan>
-                    <tspan x="47.0322" y="0">e</tspan>
-                    <tspan x="59.1421" y="0">r</tspan>
-                    <tspan x="-34.5347" y="24">D</tspan>
-                    <tspan x="-19.6216" y="24">e</tspan>
-                    <tspan x="-7.749" y="24">v</tspan>
-                    <tspan x="3.7134" y="24">e</tspan>
-                    <tspan x="15.7852" y="24">l</tspan>
-                    <tspan x="22.0586" y="24">o</tspan>
-                    <tspan x="35.0903" y="24">p</tspan>
-                    <tspan x="48.5303" y="24">m</tspan>
-                    <tspan x="68.6733" y="24">e</tspan>
-                    <tspan x="80.7832" y="24">n</tspan>
-                    <tspan x="93.9644" y="24">t</tspan>
-                </text>
-            
+        <g class="slice" id="s-career-development" transform="tanslate(0 0) scale(1)">
+            <path d="M197.785,244.4713a47.4894,47.4894,0,0,1-34.1257-14.4126L78.1206,315.5974a167.85,167.85,0,0,0,237.3769,0l-84.5646-84.5646A47.4731,47.4731,0,0,1,197.785,244.4713Z" transform="translate(-2.5924 -2.7706)" />
+            <text transform="translate(171.897 325.5491)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">S
+                <tspan x="6.5674" y="0">e</tspan>
+                <tspan x="12.6655" y="0">p</tspan>
+                <tspan x="19.4038" y="0">t</tspan>
+                <tspan x="23.3574" y="0">-</tspan>
+                <tspan x="27.5181" y="0">O</tspan>
+                <tspan x="35.6021" y="0">c</tspan>
+                <tspan x="41.332" y="0">t</tspan>
+            </text>
+            <text transform="translate(160.6821 284.1956)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">C
+                <tspan x="13.752" y="0">a</tspan>
+                <tspan x="26.124" y="0">r</tspan>
+                <tspan x="34.9028" y="0">e</tspan>
+                <tspan x="47.0322" y="0">e</tspan>
+                <tspan x="59.1421" y="0">r</tspan>
+                <tspan x="-34.5347" y="24">D</tspan>
+                <tspan x="-19.6216" y="24">e</tspan>
+                <tspan x="-7.749" y="24">v</tspan>
+                <tspan x="3.7134" y="24">e</tspan>
+                <tspan x="15.7852" y="24">l</tspan>
+                <tspan x="22.0586" y="24">o</tspan>
+                <tspan x="35.0903" y="24">p</tspan>
+                <tspan x="48.5303" y="24">m</tspan>
+                <tspan x="68.6733" y="24">e</tspan>
+                <tspan x="80.7832" y="24">n</tspan>
+                <tspan x="93.9644" y="24">t</tspan>
+            </text>
         </g>
-        <g class="slice" id="s-mid-year-review">
-            <path d="M315.4974,78.2205l-84.4816,84.4817a47.6056,47.6056,0,0,1-.083,68.3306l84.5646,84.5646A167.85,167.85,0,0,0,315.4974,78.2205Z" transform="translate(-2.5924 -2.7706)"  />
-           
-                <text transform="translate(257.2775 188.3969)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">M
-                    <tspan x="17.623" y="0">i</tspan>
-                    <tspan x="23.7021" y="0">d</tspan>
-                    <tspan x="37.4009" y="0">-</tspan>
-                    <tspan x="44.2095" y="0" style="letter-spacing: -1px">Y</tspan>
-                    <tspan x="54.9419" y="0">e</tspan>
-                    <tspan x="66.8193" y="0">a</tspan>
-                    <tspan x="79.1914" y="0">r</tspan>
-                    <tspan x="7.3218" y="24">R</tspan>
-                    <tspan x="21.3042" y="24">e</tspan>
-                    <tspan x="33.1768" y="24">v</tspan>
-                    <tspan x="44.9341" y="24">i</tspan>
-                    <tspan x="50.9868" y="24">e</tspan>
-                    <tspan x="62.8687" y="24">w</tspan>
-                </text>
-                <text transform="translate(276.5607 229.8001)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">M
-                    <tspan x="8.8042" y="0">a</tspan>
-                    <tspan x="14.8379" y="0">y</tspan>
-                    <tspan x="20.75" y="0">-</tspan>
-                    <tspan x="24.3813" y="0">J</tspan>
-                    <tspan x="30.2334" y="0">u</tspan>
-                    <tspan x="36.8398" y="0">n</tspan>
-                    <tspan x="43.5415" y="0">e</tspan>
-                </text>
-            
+        <g class="slice" id="s-mid-year-review" transform="tanslate(0 0) scale(1)">
+            <path d="M315.4974,78.2205l-84.4816,84.4817a47.6056,47.6056,0,0,1-.083,68.3306l84.5646,84.5646A167.85,167.85,0,0,0,315.4974,78.2205Z" transform="translate(-2.5924 -2.7706)" />
+            <text transform="translate(257.2775 188.3969)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">M
+                <tspan x="17.623" y="0">i</tspan>
+                <tspan x="23.7021" y="0">d</tspan>
+                <tspan x="37.4009" y="0">-</tspan>
+                <tspan x="44.2095" y="0" style="letter-spacing: -1px">Y</tspan>
+                <tspan x="54.9419" y="0">e</tspan>
+                <tspan x="66.8193" y="0">a</tspan>
+                <tspan x="79.1914" y="0">r</tspan>
+                <tspan x="7.3218" y="24">R</tspan>
+                <tspan x="21.3042" y="24">e</tspan>
+                <tspan x="33.1768" y="24">v</tspan>
+                <tspan x="44.9341" y="24">i</tspan>
+                <tspan x="50.9868" y="24">e</tspan>
+                <tspan x="62.8687" y="24">w</tspan>
+            </text>
+            <text transform="translate(276.5607 229.8001)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">M
+                <tspan x="8.8042" y="0">a</tspan>
+                <tspan x="14.8379" y="0">y</tspan>
+                <tspan x="20.75" y="0">-</tspan>
+                <tspan x="24.3813" y="0">J</tspan>
+                <tspan x="30.2334" y="0">u</tspan>
+                <tspan x="36.8398" y="0">n</tspan>
+                <tspan x="43.5415" y="0">e</tspan>
+            </text>
         </g>
-        <g class="slice" id="s-goal-setting">
-            <path id="pie" d="M197.785,149.1846a47.4758,47.4758,0,0,1,33.2308,13.5176l84.4816-84.4817a167.8507,167.8507,0,0,0-237.3769,0l85.46,85.46A47.49,47.49,0,0,1,197.785,149.1846Z" transform="translate(-2.5924 -2.7706)"  />
-            
-                <text transform="translate(173.5643 108.7445)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">J
-                    <tspan x="5.7383" y="0">a</tspan>
-                    <tspan x="11.9688" y="0">n-</tspan>
-                    <tspan x="22.8477" y="0">F</tspan>
-                    <tspan x="28.7734" y="0">e</tspan>
-                    <tspan x="34.8716" y="0">b</tspan>
-                </text>
-                <text transform="translate(131.4179 91.6267)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">G
-                    <tspan x="14.9854" y="0">o</tspan>
-                    <tspan x="27.8301" y="0">a</tspan>
-                    <tspan x="40.1733" y="0">l </tspan>
-                    <tspan x="51.5967" y="0">S</tspan>
-                    <tspan x="64.6431" y="0">e</tspan>
-                    <tspan x="76.7603" y="0">t</tspan>
-                    <tspan x="85.7168" y="0">t</tspan>
-                    <tspan x="94.208" y="0">i</tspan>
-                    <tspan x="100.2607" y="0">n</tspan>
-                    <tspan x="113.4531" y="0">g</tspan>
-                </text>
-            
+        <g class="slice" id="s-goal-setting" transform="tanslate(0 0) scale(1)">
+            <path id="pie" d="M197.785,149.1846a47.4758,47.4758,0,0,1,33.2308,13.5176l84.4816-84.4817a167.8507,167.8507,0,0,0-237.3769,0l85.46,85.46A47.49,47.49,0,0,1,197.785,149.1846Z" transform="translate(-2.5924 -2.7706)" />
+            <text transform="translate(173.5643 108.7445)" style="font-size: 12px;font-family: Source Sans Pro;font-weight: 600">J
+                <tspan x="5.7383" y="0">a</tspan>
+                <tspan x="11.9688" y="0">n-</tspan>
+                <tspan x="22.8477" y="0">F</tspan>
+                <tspan x="28.7734" y="0">e</tspan>
+                <tspan x="34.8716" y="0">b</tspan>
+            </text>
+            <text transform="translate(131.4179 91.6267)" style="font-size: 24px;font-family: Source Sans Pro;font-weight: 600">G
+                <tspan x="14.9854" y="0">o</tspan>
+                <tspan x="27.8301" y="0">a</tspan>
+                <tspan x="40.1733" y="0">l </tspan>
+                <tspan x="51.5967" y="0">S</tspan>
+                <tspan x="64.6431" y="0">e</tspan>
+                <tspan x="76.7603" y="0">t</tspan>
+                <tspan x="85.7168" y="0">t</tspan>
+                <tspan x="94.208" y="0">i</tspan>
+                <tspan x="100.2607" y="0">n</tspan>
+                <tspan x="113.4531" y="0">g</tspan>
+            </text>
         </g>
     </g>
-    <g id="ring-text" class="ring-peices">
+    <g id="ring-text" class="ring-peices slice">
         <text transform="translate(47.6403 361.1228) rotate(40.0414)" style="font-size: 26px;font-family: Source Sans Pro">O</text>
         <text transform="matrix(0.8106, 0.5856, -0.5856, 0.8106, 61.1659, 372.2897)" style="font-size: 26px;font-family: Source Sans Pro">n</text>
         <text transform="translate(72.6451 380.6542) rotate(32.2613)" style="font-size: 26px;font-family: Source Sans Pro">g</text>
@@ -159,19 +208,19 @@
         <text transform="matrix(0.7756, -0.6312, 0.6312, 0.7756, 332.4365, 368.1205)" style="font-size: 26px;font-family: Source Sans Pro">g</text>
     </g>
     <g>
-        <g class="slice" id="s-home">
+        <g class="slice" id="s-center">
             <path d="M231.0158,162.7022a47.6056,47.6056,0,1,0,14.4126,34.1257A47.4758,47.4758,0,0,0,231.0158,162.7022Z" transform="translate(-2.5924 -2.7706)" style="fill: #f9f9f9" />
             <g>
                 <g id="convo-bubbles" class="ring-peices">
-                    <path d="M191.3243,184.3552h-0.0455a26.2053,26.2053,0,0,0,13.1524,3.97c0.6024,0,1.2241.03,1.8476,0.03h1.0047l-0.04,6.2668,6.15-7.6117,0.2313-.0727c5.7064-2.238,9.2517-6.37,9.2517-10.8,0-5.6862-5.6532-10.4823-13.3513-11.9831a10.229,10.229,0,0,1,2.1176,6.1091C211.6424,178.1781,202.5278,184.3552,191.3243,184.3552Z" transform="translate(-2.5924 -2.7706)"  />
-                    <path d="M188.4729,182.8808l1.0047,0.0668c0.6226,0.042,1.2443.063,1.8467,0.063,10.1714,0,18.4458-5.5985,18.4458-12.4806s-8.2744-12.4825-18.4458-12.4825-18.4449,5.5995-18.4449,12.4825c0,4.4293,3.5453,8.5706,9.2517,10.8086l0.2313,0.09,6.15,7.6473Z" transform="translate(-2.5924 -2.7706)"  />
+                    <path d="M191.3243,184.3552h-0.0455a26.2053,26.2053,0,0,0,13.1524,3.97c0.6024,0,1.2241.03,1.8476,0.03h1.0047l-0.04,6.2668,6.15-7.6117,0.2313-.0727c5.7064-2.238,9.2517-6.37,9.2517-10.8,0-5.6862-5.6532-10.4823-13.3513-11.9831a10.229,10.229,0,0,1,2.1176,6.1091C211.6424,178.1781,202.5278,184.3552,191.3243,184.3552Z" transform="translate(-2.5924 -2.7706)" />
+                    <path d="M188.4729,182.8808l1.0047,0.0668c0.6226,0.042,1.2443.063,1.8467,0.063,10.1714,0,18.4458-5.5985,18.4458-12.4806s-8.2744-12.4825-18.4458-12.4825-18.4449,5.5995-18.4449,12.4825c0,4.4293,3.5453,8.5706,9.2517,10.8086l0.2313,0.09,6.15,7.6473Z" transform="translate(-2.5924 -2.7706)" />
                 </g>
                 <g id="left-dude" class="ring-peices">
-                    <path d="M187.8826,229.2136H177.644a2.1308,2.1308,0,0,1-2.1308-2.1308V213.88a7.25,7.25,0,0,1,7.25-7.25h0a7.25,7.25,0,0,1,7.25,7.25v13.2029A2.1308,2.1308,0,0,1,187.8826,229.2136Z" transform="translate(-2.5924 -2.7706)"  />
-                    <circle cx="180.1708" cy="195.6469" r="7.25"  />
+                    <path d="M187.8826,229.2136H177.644a2.1308,2.1308,0,0,1-2.1308-2.1308V213.88a7.25,7.25,0,0,1,7.25-7.25h0a7.25,7.25,0,0,1,7.25,7.25v13.2029A2.1308,2.1308,0,0,1,187.8826,229.2136Z" transform="translate(-2.5924 -2.7706)" />
+                    <circle cx="180.1708" cy="195.6469" r="7.25" />
                 </g>
                 <g id="right-dude" class="ring-peices">
-                    <path d="M214.8894,235.9448H204.6509a2.1308,2.1308,0,0,1-2.1308-2.1307V220.6112a7.25,7.25,0,0,1,7.25-7.25h0a7.25,7.25,0,0,1,7.25,7.25v13.2029A2.1308,2.1308,0,0,1,214.8894,235.9448Z" transform="translate(-2.5924 -2.7706)"  />
+                    <path d="M214.8894,235.9448H204.6509a2.1308,2.1308,0,0,1-2.1308-2.1307V220.6112a7.25,7.25,0,0,1,7.25-7.25h0a7.25,7.25,0,0,1,7.25,7.25v13.2029A2.1308,2.1308,0,0,1,214.8894,235.9448Z" transform="translate(-2.5924 -2.7706)" />
                     <circle cx="207.1777" cy="202.3781" r="7.25" />
                 </g>
             </g>

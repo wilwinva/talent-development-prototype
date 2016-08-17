@@ -7,7 +7,7 @@ angular.module('pmfApp', ['ui.router', 'ngSanitize', 'pmfApp.models.pmfApi'])
         $rootScope.angular = angular;
         $rootScope.$on('$stateChangeSuccess', function () {
           var title = getTitleValue($state.$current.locals.globals.$title);
-          console.log('title', title);
+          //console.log('title', title);
           $timeout(function () {
             $rootScope.$title = title;
           });
@@ -29,11 +29,30 @@ angular.module('pmfApp', ['ui.router', 'ngSanitize', 'pmfApp.models.pmfApi'])
                 $state.go('yearend');
                 break;
               case $('#s-ongoing-dialog')[0]:
+              case $('#s-center')[0]:
+              case $('#convo-bubbles-bottom')[0]:
+              case $('#ring-text')[0]:
                 $state.go('dialog');
                 break;
+             
+
             }
           });
         }, 1000);
+        $timeout(function () {
+          var center = $('#s-center, #s-ongoing-dialog, #convo-bubbles-bottom, #ring-text');
+          //console.log(center)
+          center.hover(function (event) {
+            //console.log(event)
+              rollOverDialog(event.currentTarget.id);
+              //alert("on")
+            }, function() {
+               //alert("off");
+               rollOffDialog();
+            }
+          );
+        }, 1000);
+
 
         function getTitleValue(title) {
           return angular.isFunction(title) ? title() : title;
